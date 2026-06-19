@@ -1,0 +1,618 @@
+{
+  "meta": {
+    "skill": "home-ui-design-skill",
+    "version": "1.0.0",
+    "format": "semantic-design-tokens"
+  },
+  "color": [
+    {
+      "name": "color.brand.hue",
+      "value": "250",
+      "role": "Default cool accent hue",
+      "usage": "Use as the base hue for accent, links, badges, focus rings, and active controls.",
+      "confidence": "high",
+      "modifiable": true,
+      "fallback": "220"
+    },
+    {
+      "name": "color.brand.primary",
+      "value": "oklch(0.70 0.14 var(--hue))",
+      "role": "Primary accent",
+      "usage": "Use for active indicators, icon strokes, selected pagination, and primary links.",
+      "confidence": "high",
+      "modifiable": true,
+      "fallback": "#4c9df6"
+    },
+    {
+      "name": "color.brand.primary.dark",
+      "value": "oklch(0.75 0.14 var(--hue))",
+      "role": "Primary accent on dark surfaces",
+      "usage": "Use for active controls and links in dark mode.",
+      "confidence": "high",
+      "modifiable": true,
+      "fallback": "#7bb8ff"
+    },
+    {
+      "name": "color.surface.page",
+      "value": "oklch(0.95 0.01 var(--hue))",
+      "role": "Light page background",
+      "usage": "Use for the main page canvas behind cards and panels.",
+      "confidence": "high",
+      "modifiable": true,
+      "fallback": "#edf3f8"
+    },
+    {
+      "name": "color.surface.page.dark",
+      "value": "oklch(0.16 0.014 var(--hue))",
+      "role": "Dark page background",
+      "usage": "Use for dark mode canvas.",
+      "confidence": "high",
+      "modifiable": true,
+      "fallback": "#111820"
+    },
+    {
+      "name": "color.surface.card",
+      "value": "#ffffff",
+      "role": "Light card surface",
+      "usage": "Use for primary content cards, navigation bars, widgets, and panels.",
+      "confidence": "high",
+      "modifiable": true,
+      "fallback": "#ffffff"
+    },
+    {
+      "name": "color.surface.card.dark",
+      "value": "oklch(0.23 0.015 var(--hue))",
+      "role": "Dark card surface",
+      "usage": "Use for content cards and panels in dark mode.",
+      "confidence": "high",
+      "modifiable": true,
+      "fallback": "#18212a"
+    },
+    {
+      "name": "color.surface.control",
+      "value": "oklch(0.95 0.025 var(--hue))",
+      "role": "Soft control fill",
+      "usage": "Use for icon buttons, tags, metadata icons, and compact controls.",
+      "confidence": "high",
+      "modifiable": true,
+      "fallback": "#e7f2ff"
+    },
+    {
+      "name": "color.surface.control.hover",
+      "value": "oklch(0.90 0.05 var(--hue))",
+      "role": "Soft control hover fill",
+      "usage": "Use for hover states on compact buttons and pills.",
+      "confidence": "high",
+      "modifiable": true,
+      "fallback": "#d7eaff"
+    },
+    {
+      "name": "color.text.primary",
+      "value": "rgba(0, 0, 0, 0.86)",
+      "role": "Primary text",
+      "usage": "Use for headings and strong labels on light surfaces.",
+      "confidence": "high",
+      "modifiable": true,
+      "fallback": "#111827"
+    },
+    {
+      "name": "color.text.primary.dark",
+      "value": "rgba(255, 255, 255, 0.92)",
+      "role": "Primary text on dark surfaces",
+      "usage": "Use for headings and strong labels in dark mode.",
+      "confidence": "high",
+      "modifiable": true,
+      "fallback": "#f5f7fb"
+    },
+    {
+      "name": "color.text.secondary",
+      "value": "rgba(0, 0, 0, 0.55)",
+      "role": "Muted text",
+      "usage": "Use for metadata, helper text, inactive labels, and secondary paragraphs.",
+      "confidence": "high",
+      "modifiable": true,
+      "fallback": "#6b7280"
+    },
+    {
+      "name": "color.text.secondary.dark",
+      "value": "rgba(255, 255, 255, 0.60)",
+      "role": "Muted text on dark surfaces",
+      "usage": "Use for metadata and helper text in dark mode.",
+      "confidence": "high",
+      "modifiable": true,
+      "fallback": "#a8b0bc"
+    },
+    {
+      "name": "color.border.subtle",
+      "value": "rgba(0, 0, 0, 0.08)",
+      "role": "Subtle divider",
+      "usage": "Use for list separators, article rules, and low-emphasis card dividers.",
+      "confidence": "high",
+      "modifiable": true,
+      "fallback": "#e5e7eb"
+    },
+    {
+      "name": "color.border.subtle.dark",
+      "value": "rgba(255, 255, 255, 0.10)",
+      "role": "Subtle divider on dark surfaces",
+      "usage": "Use for dark mode list separators and card dividers.",
+      "confidence": "high",
+      "modifiable": true,
+      "fallback": "#2f3a45"
+    },
+    {
+      "name": "color.state.error",
+      "value": "oklch(0.60 0.20 25)",
+      "role": "Error state",
+      "usage": "Use for error messages, invalid fields, and destructive confirmation.",
+      "confidence": "medium",
+      "modifiable": true,
+      "fallback": "#dc2626"
+    },
+    {
+      "name": "color.state.success",
+      "value": "oklch(0.68 0.15 150)",
+      "role": "Success state",
+      "usage": "Use for success feedback and completed states.",
+      "confidence": "medium",
+      "modifiable": true,
+      "fallback": "#16a34a"
+    }
+  ],
+  "typography": [
+    {
+      "name": "typography.family.sans",
+      "value": "Roboto, ui-sans-serif, system-ui, sans-serif",
+      "role": "Primary interface typeface",
+      "usage": "Use for all UI text, metadata, navigation, buttons, and body copy.",
+      "confidence": "high",
+      "modifiable": true,
+      "fallback": "ui-sans-serif, system-ui, sans-serif"
+    },
+    {
+      "name": "typography.size.body",
+      "value": "1rem",
+      "role": "Default body size",
+      "usage": "Use for regular desktop body text.",
+      "confidence": "high",
+      "modifiable": true,
+      "fallback": "16px"
+    },
+    {
+      "name": "typography.size.body.mobile",
+      "value": "0.875rem",
+      "role": "Default mobile body size",
+      "usage": "Use for mobile body text and compact controls.",
+      "confidence": "high",
+      "modifiable": true,
+      "fallback": "14px"
+    },
+    {
+      "name": "typography.size.h1",
+      "value": "2rem",
+      "role": "Main page heading",
+      "usage": "Use for primary article, panel, or page titles.",
+      "confidence": "high",
+      "modifiable": true,
+      "fallback": "32px"
+    },
+    {
+      "name": "typography.size.h2",
+      "value": "1.5rem",
+      "role": "Section heading",
+      "usage": "Use for card titles and major section labels.",
+      "confidence": "high",
+      "modifiable": true,
+      "fallback": "24px"
+    },
+    {
+      "name": "typography.weight.bold",
+      "value": "700",
+      "role": "Strong emphasis",
+      "usage": "Use for navigation labels, card titles, and headings.",
+      "confidence": "high",
+      "modifiable": true,
+      "fallback": "700"
+    },
+    {
+      "name": "typography.lineHeight.body",
+      "value": "1.7",
+      "role": "Readable paragraph rhythm",
+      "usage": "Use for long-form text and descriptive sections.",
+      "confidence": "medium",
+      "modifiable": true,
+      "fallback": "1.6"
+    }
+  ],
+  "spacing": [
+    {
+      "name": "spacing.1",
+      "value": "0.25rem",
+      "role": "Tiny gap",
+      "usage": "Use inside icon and metadata clusters.",
+      "confidence": "high",
+      "modifiable": true,
+      "fallback": "4px"
+    },
+    {
+      "name": "spacing.2",
+      "value": "0.5rem",
+      "role": "Small gap",
+      "usage": "Use inside badges, buttons, and compact rows.",
+      "confidence": "high",
+      "modifiable": true,
+      "fallback": "8px"
+    },
+    {
+      "name": "spacing.3",
+      "value": "0.75rem",
+      "role": "Card inner small padding",
+      "usage": "Use for compact cards and media padding.",
+      "confidence": "high",
+      "modifiable": true,
+      "fallback": "12px"
+    },
+    {
+      "name": "spacing.4",
+      "value": "1rem",
+      "role": "Default component gap",
+      "usage": "Use for card padding, row gaps, and widget spacing.",
+      "confidence": "high",
+      "modifiable": true,
+      "fallback": "16px"
+    },
+    {
+      "name": "spacing.6",
+      "value": "1.5rem",
+      "role": "Section inner gap",
+      "usage": "Use between card title, metadata, and content.",
+      "confidence": "high",
+      "modifiable": true,
+      "fallback": "24px"
+    },
+    {
+      "name": "spacing.section.md",
+      "value": "3rem",
+      "role": "Default section spacing",
+      "usage": "Use between major sections on desktop.",
+      "confidence": "medium",
+      "modifiable": true,
+      "fallback": "48px"
+    },
+    {
+      "name": "spacing.section.lg",
+      "value": "5rem",
+      "role": "Large section spacing",
+      "usage": "Use around hero and broad feature sections.",
+      "confidence": "medium",
+      "modifiable": true,
+      "fallback": "80px"
+    }
+  ],
+  "radius": [
+    {
+      "name": "radius.control",
+      "value": "0.5rem",
+      "role": "Compact control radius",
+      "usage": "Use for icon buttons, tags, pagination, and small inputs.",
+      "confidence": "high",
+      "modifiable": true,
+      "fallback": "8px"
+    },
+    {
+      "name": "radius.action",
+      "value": "0.75rem",
+      "role": "Primary action radius",
+      "usage": "Use for primary buttons and search fields.",
+      "confidence": "high",
+      "modifiable": true,
+      "fallback": "12px"
+    },
+    {
+      "name": "radius.card.default",
+      "value": "1rem",
+      "role": "Default card radius",
+      "usage": "Use for content cards, nav containers, widgets, and panels.",
+      "confidence": "high",
+      "modifiable": true,
+      "fallback": "16px"
+    },
+    {
+      "name": "radius.media",
+      "value": "0.875rem",
+      "role": "Media radius",
+      "usage": "Use for avatars, thumbnails, and media blocks.",
+      "confidence": "high",
+      "modifiable": true,
+      "fallback": "14px"
+    }
+  ],
+  "shadow": [
+    {
+      "name": "shadow.none",
+      "value": "none",
+      "role": "Flat card surface",
+      "usage": "Use for most cards and page sections.",
+      "confidence": "high",
+      "modifiable": true,
+      "fallback": "none"
+    },
+    {
+      "name": "shadow.panel.float",
+      "value": "0 20px 25px -5px rgb(0 0 0 / 0.10), 0 8px 10px -6px rgb(0 0 0 / 0.10)",
+      "role": "Floating panel elevation",
+      "usage": "Use only for dropdowns, menus, popovers, and overlays.",
+      "confidence": "high",
+      "modifiable": true,
+      "fallback": "0 12px 24px rgb(15 23 42 / 0.12)"
+    },
+    {
+      "name": "shadow.control.soft",
+      "value": "0 8px 18px rgb(15 23 42 / 0.08)",
+      "role": "Optional control elevation",
+      "usage": "Use sparingly for active floating controls.",
+      "confidence": "medium",
+      "modifiable": true,
+      "fallback": "0 6px 12px rgb(15 23 42 / 0.08)"
+    }
+  ],
+  "border": [
+    {
+      "name": "border.none",
+      "value": "0",
+      "role": "Default flat border",
+      "usage": "Use for clean card containers when separation is provided by background.",
+      "confidence": "high",
+      "modifiable": true,
+      "fallback": "0"
+    },
+    {
+      "name": "border.subtle",
+      "value": "1px solid var(--color-border-subtle)",
+      "role": "Low-emphasis separation",
+      "usage": "Use for lists, inputs, forms, and grouped content.",
+      "confidence": "medium",
+      "modifiable": true,
+      "fallback": "1px solid #e5e7eb"
+    }
+  ],
+  "motion": [
+    {
+      "name": "motion.duration.fast",
+      "value": "150ms",
+      "role": "Fast feedback",
+      "usage": "Use for hover, focus, and active feedback.",
+      "confidence": "high",
+      "modifiable": true,
+      "fallback": "150ms"
+    },
+    {
+      "name": "motion.duration.base",
+      "value": "200ms",
+      "role": "Standard UI transition",
+      "usage": "Use for panel reveal, color transitions, and page content fades.",
+      "confidence": "high",
+      "modifiable": true,
+      "fallback": "200ms"
+    },
+    {
+      "name": "motion.duration.enter",
+      "value": "300ms",
+      "role": "Content entrance",
+      "usage": "Use for first-load fade-up animations.",
+      "confidence": "high",
+      "modifiable": true,
+      "fallback": "300ms"
+    },
+    {
+      "name": "motion.easing.standard",
+      "value": "cubic-bezier(0.4, 0, 0.2, 1)",
+      "role": "Standard easing",
+      "usage": "Use for color, panel, and transform transitions.",
+      "confidence": "high",
+      "modifiable": true,
+      "fallback": "ease"
+    },
+    {
+      "name": "motion.scale.active",
+      "value": "0.95",
+      "role": "Active press scale",
+      "usage": "Use for text buttons and card actions.",
+      "confidence": "high",
+      "modifiable": true,
+      "fallback": "0.98"
+    },
+    {
+      "name": "motion.scale.icon.active",
+      "value": "0.90",
+      "role": "Icon button press scale",
+      "usage": "Use for compact icon controls.",
+      "confidence": "high",
+      "modifiable": true,
+      "fallback": "0.95"
+    }
+  ],
+  "breakpoint": [
+    {
+      "name": "breakpoint.mobile",
+      "value": "0px",
+      "role": "Mobile first base",
+      "usage": "Use as the default layout range.",
+      "confidence": "high",
+      "modifiable": false,
+      "fallback": "0px"
+    },
+    {
+      "name": "breakpoint.tablet",
+      "value": "768px",
+      "role": "Tablet range",
+      "usage": "Use for two-column opportunities and larger type.",
+      "confidence": "high",
+      "modifiable": true,
+      "fallback": "768px"
+    },
+    {
+      "name": "breakpoint.desktop",
+      "value": "1024px",
+      "role": "Desktop shell",
+      "usage": "Use for sidebars, broad cards, and full navigation.",
+      "confidence": "high",
+      "modifiable": true,
+      "fallback": "1024px"
+    },
+    {
+      "name": "breakpoint.wide",
+      "value": "1280px",
+      "role": "Wide content range",
+      "usage": "Use for max-width page containers.",
+      "confidence": "high",
+      "modifiable": true,
+      "fallback": "1280px"
+    }
+  ],
+  "zIndex": [
+    {
+      "name": "zIndex.base",
+      "value": "0",
+      "role": "Base layer",
+      "usage": "Use for default content.",
+      "confidence": "high",
+      "modifiable": false,
+      "fallback": "0"
+    },
+    {
+      "name": "zIndex.nav",
+      "value": "40",
+      "role": "Navigation layer",
+      "usage": "Use for sticky top bars.",
+      "confidence": "high",
+      "modifiable": true,
+      "fallback": "40"
+    },
+    {
+      "name": "zIndex.panel",
+      "value": "50",
+      "role": "Floating panel layer",
+      "usage": "Use for dropdowns and popovers.",
+      "confidence": "high",
+      "modifiable": true,
+      "fallback": "50"
+    },
+    {
+      "name": "zIndex.modal",
+      "value": "100",
+      "role": "Modal layer",
+      "usage": "Use for blocking overlays.",
+      "confidence": "medium",
+      "modifiable": true,
+      "fallback": "100"
+    }
+  ],
+  "opacity": [
+    {
+      "name": "opacity.disabled",
+      "value": "0.38",
+      "role": "Disabled affordance",
+      "usage": "Use for inactive controls that remain visible.",
+      "confidence": "medium",
+      "modifiable": true,
+      "fallback": "0.4"
+    },
+    {
+      "name": "opacity.muted",
+      "value": "0.60",
+      "role": "Secondary emphasis",
+      "usage": "Use for timestamps, helper text, and low-priority metadata.",
+      "confidence": "high",
+      "modifiable": true,
+      "fallback": "0.6"
+    },
+    {
+      "name": "opacity.overlay",
+      "value": "0.50",
+      "role": "Overlay scrim",
+      "usage": "Use for modal backdrops only.",
+      "confidence": "medium",
+      "modifiable": true,
+      "fallback": "0.5"
+    }
+  ],
+  "blur": [
+    {
+      "name": "blur.panel",
+      "value": "12px",
+      "role": "Optional panel blur",
+      "usage": "Use only when panel contrast remains sufficient.",
+      "confidence": "medium",
+      "modifiable": true,
+      "fallback": "8px"
+    }
+  ],
+  "container": [
+    {
+      "name": "container.page.max",
+      "value": "75rem",
+      "role": "Maximum page width",
+      "usage": "Use for top navigation and desktop content shell.",
+      "confidence": "high",
+      "modifiable": true,
+      "fallback": "1200px"
+    },
+    {
+      "name": "container.sidebar.width",
+      "value": "17.5rem",
+      "role": "Desktop sidebar width",
+      "usage": "Use for profile, filters, summaries, or secondary widgets.",
+      "confidence": "high",
+      "modifiable": true,
+      "fallback": "280px"
+    },
+    {
+      "name": "container.mobile.gutter",
+      "value": "1rem",
+      "role": "Mobile page gutter",
+      "usage": "Use for mobile content and floating search panels.",
+      "confidence": "high",
+      "modifiable": true,
+      "fallback": "16px"
+    }
+  ],
+  "grid": [
+    {
+      "name": "grid.desktop.shell",
+      "value": "sidebar main",
+      "role": "Desktop content shell",
+      "usage": "Use a fixed sidebar with a flexible main column when secondary content is useful.",
+      "confidence": "high",
+      "modifiable": true,
+      "fallback": "main"
+    },
+    {
+      "name": "grid.desktop.columns",
+      "value": "minmax(0, 17.5rem) minmax(0, 1fr)",
+      "role": "Desktop two-column grid",
+      "usage": "Use for profile plus content, filter plus results, or navigation plus detail.",
+      "confidence": "high",
+      "modifiable": true,
+      "fallback": "1fr"
+    },
+    {
+      "name": "grid.card.list",
+      "value": "1fr",
+      "role": "Stacked content cards",
+      "usage": "Use for content lists, archive summaries, and feed views.",
+      "confidence": "high",
+      "modifiable": true,
+      "fallback": "1fr"
+    },
+    {
+      "name": "grid.feature.cards",
+      "value": "repeat(auto-fit, minmax(16rem, 1fr))",
+      "role": "Responsive feature cards",
+      "usage": "Use for product features, benefits, plans, and testimonial cards.",
+      "confidence": "medium",
+      "modifiable": true,
+      "fallback": "repeat(auto-fit, minmax(240px, 1fr))"
+    }
+  ]
+}

@@ -1,0 +1,618 @@
+{
+  "meta": {
+    "skill": "home-ui-design-skill",
+    "version": "1.0.0",
+    "format": "semantic-design-tokens"
+  },
+  "color": [
+    {
+      "name": "color.brand.hue",
+      "value": "250",
+      "role": "默认冷色强调 hue",
+      "usage": "用于强调色、链接、标签、focus ring 和 active 控件的基础 hue。",
+      "confidence": "high",
+      "modifiable": true,
+      "fallback": "220"
+    },
+    {
+      "name": "color.brand.primary",
+      "value": "oklch(0.70 0.14 var(--hue))",
+      "role": "主强调色",
+      "usage": "用于 active 指示、图标描边、选中分页和主链接。",
+      "confidence": "high",
+      "modifiable": true,
+      "fallback": "#4c9df6"
+    },
+    {
+      "name": "color.brand.primary.dark",
+      "value": "oklch(0.75 0.14 var(--hue))",
+      "role": "暗色表面主强调色",
+      "usage": "用于暗色模式中的 active 控件和链接。",
+      "confidence": "high",
+      "modifiable": true,
+      "fallback": "#7bb8ff"
+    },
+    {
+      "name": "color.surface.page",
+      "value": "oklch(0.95 0.01 var(--hue))",
+      "role": "浅色页面背景",
+      "usage": "用于卡片和面板背后的主画布。",
+      "confidence": "high",
+      "modifiable": true,
+      "fallback": "#edf3f8"
+    },
+    {
+      "name": "color.surface.page.dark",
+      "value": "oklch(0.16 0.014 var(--hue))",
+      "role": "暗色页面背景",
+      "usage": "用于暗色模式画布。",
+      "confidence": "high",
+      "modifiable": true,
+      "fallback": "#111820"
+    },
+    {
+      "name": "color.surface.card",
+      "value": "#ffffff",
+      "role": "浅色卡片表面",
+      "usage": "用于主内容卡片、导航栏、组件卡片和面板。",
+      "confidence": "high",
+      "modifiable": true,
+      "fallback": "#ffffff"
+    },
+    {
+      "name": "color.surface.card.dark",
+      "value": "oklch(0.23 0.015 var(--hue))",
+      "role": "暗色卡片表面",
+      "usage": "用于暗色模式下的内容卡片和面板。",
+      "confidence": "high",
+      "modifiable": true,
+      "fallback": "#18212a"
+    },
+    {
+      "name": "color.surface.control",
+      "value": "oklch(0.95 0.025 var(--hue))",
+      "role": "柔和控件填充",
+      "usage": "用于图标按钮、标签、元信息图标和紧凑控件。",
+      "confidence": "high",
+      "modifiable": true,
+      "fallback": "#e7f2ff"
+    },
+    {
+      "name": "color.surface.control.hover",
+      "value": "oklch(0.90 0.05 var(--hue))",
+      "role": "柔和控件 hover 填充",
+      "usage": "用于紧凑按钮和 pill 的 hover 状态。",
+      "confidence": "high",
+      "modifiable": true,
+      "fallback": "#d7eaff"
+    },
+    {
+      "name": "color.text.primary",
+      "value": "rgba(0, 0, 0, 0.86)",
+      "role": "主文本",
+      "usage": "用于浅色表面上的标题和强标签。",
+      "confidence": "high",
+      "modifiable": true,
+      "fallback": "#111827"
+    },
+    {
+      "name": "color.text.primary.dark",
+      "value": "rgba(255, 255, 255, 0.92)",
+      "role": "暗色主文本",
+      "usage": "用于暗色模式下的标题和强标签。",
+      "confidence": "high",
+      "modifiable": true,
+      "fallback": "#f5f7fb"
+    },
+    {
+      "name": "color.text.secondary",
+      "value": "rgba(0, 0, 0, 0.55)",
+      "role": "弱化文本",
+      "usage": "用于元信息、辅助文字、非活动标签和次级段落。",
+      "confidence": "high",
+      "modifiable": true,
+      "fallback": "#6b7280"
+    },
+    {
+      "name": "color.text.secondary.dark",
+      "value": "rgba(255, 255, 255, 0.60)",
+      "role": "暗色弱化文本",
+      "usage": "用于暗色模式下的元信息和辅助文字。",
+      "confidence": "high",
+      "modifiable": true,
+      "fallback": "#a8b0bc"
+    },
+    {
+      "name": "color.border.subtle",
+      "value": "rgba(0, 0, 0, 0.08)",
+      "role": "弱分隔线",
+      "usage": "用于列表分隔、文章分隔线和低强调卡片分隔。",
+      "confidence": "high",
+      "modifiable": true,
+      "fallback": "#e5e7eb"
+    },
+    {
+      "name": "color.border.subtle.dark",
+      "value": "rgba(255, 255, 255, 0.10)",
+      "role": "暗色弱分隔线",
+      "usage": "用于暗色模式下的列表和卡片分隔。",
+      "confidence": "high",
+      "modifiable": true,
+      "fallback": "#2f3a45"
+    },
+    {
+      "name": "color.state.error",
+      "value": "oklch(0.60 0.20 25)",
+      "role": "错误状态",
+      "usage": "用于错误消息、无效字段和破坏性确认。",
+      "confidence": "medium",
+      "modifiable": true,
+      "fallback": "#dc2626"
+    },
+    {
+      "name": "color.state.success",
+      "value": "oklch(0.68 0.15 150)",
+      "role": "成功状态",
+      "usage": "用于成功反馈和完成状态。",
+      "confidence": "medium",
+      "modifiable": true,
+      "fallback": "#16a34a"
+    }
+  ],
+  "typography": [
+    {
+      "name": "typography.family.sans",
+      "value": "Roboto, ui-sans-serif, system-ui, sans-serif",
+      "role": "主界面字体",
+      "usage": "用于 UI 文本、元信息、导航、按钮和正文。",
+      "confidence": "high",
+      "modifiable": true,
+      "fallback": "ui-sans-serif, system-ui, sans-serif"
+    },
+    {
+      "name": "typography.size.body",
+      "value": "1rem",
+      "role": "默认正文尺寸",
+      "usage": "用于桌面端常规正文。",
+      "confidence": "high",
+      "modifiable": true,
+      "fallback": "16px"
+    },
+    {
+      "name": "typography.size.body.mobile",
+      "value": "0.875rem",
+      "role": "移动端正文尺寸",
+      "usage": "用于移动端正文和紧凑控件。",
+      "confidence": "high",
+      "modifiable": true,
+      "fallback": "14px"
+    },
+    {
+      "name": "typography.size.h1",
+      "value": "2rem",
+      "role": "主页面标题",
+      "usage": "用于文章、面板或页面主标题。",
+      "confidence": "high",
+      "modifiable": true,
+      "fallback": "32px"
+    },
+    {
+      "name": "typography.size.h2",
+      "value": "1.5rem",
+      "role": "Section 标题",
+      "usage": "用于卡片标题和主要 section 标签。",
+      "confidence": "high",
+      "modifiable": true,
+      "fallback": "24px"
+    },
+    {
+      "name": "typography.weight.bold",
+      "value": "700",
+      "role": "强强调字重",
+      "usage": "用于导航标签、卡片标题和标题。",
+      "confidence": "high",
+      "modifiable": true,
+      "fallback": "700"
+    },
+    {
+      "name": "typography.lineHeight.body",
+      "value": "1.7",
+      "role": "可读段落节奏",
+      "usage": "用于长文和描述性 section。",
+      "confidence": "medium",
+      "modifiable": true,
+      "fallback": "1.6"
+    }
+  ],
+  "spacing": [
+    {
+      "name": "spacing.1",
+      "value": "0.25rem",
+      "role": "极小间距",
+      "usage": "用于图标和元信息 cluster 内部。",
+      "confidence": "high",
+      "modifiable": true,
+      "fallback": "4px"
+    },
+    {
+      "name": "spacing.2",
+      "value": "0.5rem",
+      "role": "小间距",
+      "usage": "用于 badge、button 和紧凑行内部。",
+      "confidence": "high",
+      "modifiable": true,
+      "fallback": "8px"
+    },
+    {
+      "name": "spacing.3",
+      "value": "0.75rem",
+      "role": "小卡片内边距",
+      "usage": "用于紧凑卡片和媒体 padding。",
+      "confidence": "high",
+      "modifiable": true,
+      "fallback": "12px"
+    },
+    {
+      "name": "spacing.4",
+      "value": "1rem",
+      "role": "默认组件间距",
+      "usage": "用于卡片 padding、行 gap 和组件间距。",
+      "confidence": "high",
+      "modifiable": true,
+      "fallback": "16px"
+    },
+    {
+      "name": "spacing.6",
+      "value": "1.5rem",
+      "role": "Section 内部间距",
+      "usage": "用于卡片标题、元信息和内容之间。",
+      "confidence": "high",
+      "modifiable": true,
+      "fallback": "24px"
+    },
+    {
+      "name": "spacing.section.md",
+      "value": "3rem",
+      "role": "默认 section 间距",
+      "usage": "用于桌面端主要 section 之间。",
+      "confidence": "medium",
+      "modifiable": true,
+      "fallback": "48px"
+    },
+    {
+      "name": "spacing.section.lg",
+      "value": "5rem",
+      "role": "大 section 间距",
+      "usage": "用于 hero 和大型功能 section 周围。",
+      "confidence": "medium",
+      "modifiable": true,
+      "fallback": "80px"
+    }
+  ],
+  "radius": [
+    {
+      "name": "radius.control",
+      "value": "0.5rem",
+      "role": "紧凑控件圆角",
+      "usage": "用于图标按钮、标签、分页和小输入框。",
+      "confidence": "high",
+      "modifiable": true,
+      "fallback": "8px"
+    },
+    {
+      "name": "radius.action",
+      "value": "0.75rem",
+      "role": "主操作圆角",
+      "usage": "用于主按钮和搜索字段。",
+      "confidence": "high",
+      "modifiable": true,
+      "fallback": "12px"
+    },
+    {
+      "name": "radius.card.default",
+      "value": "1rem",
+      "role": "默认卡片圆角",
+      "usage": "用于内容卡片、导航容器、组件和面板。",
+      "confidence": "high",
+      "modifiable": true,
+      "fallback": "16px"
+    },
+    {
+      "name": "radius.media",
+      "value": "0.875rem",
+      "role": "媒体圆角",
+      "usage": "用于头像、缩略图和媒体块。",
+      "confidence": "high",
+      "modifiable": true,
+      "fallback": "14px"
+    }
+  ],
+  "shadow": [
+    {
+      "name": "shadow.none",
+      "value": "none",
+      "role": "平面卡片表面",
+      "usage": "用于大多数卡片和页面 section。",
+      "confidence": "high",
+      "modifiable": true,
+      "fallback": "none"
+    },
+    {
+      "name": "shadow.panel.float",
+      "value": "0 20px 25px -5px rgb(0 0 0 / 0.10), 0 8px 10px -6px rgb(0 0 0 / 0.10)",
+      "role": "浮层高度",
+      "usage": "只用于 dropdown、menu、popover 和 overlay。",
+      "confidence": "high",
+      "modifiable": true,
+      "fallback": "0 12px 24px rgb(15 23 42 / 0.12)"
+    },
+    {
+      "name": "shadow.control.soft",
+      "value": "0 8px 18px rgb(15 23 42 / 0.08)",
+      "role": "可选控件阴影",
+      "usage": "谨慎用于 active floating controls。",
+      "confidence": "medium",
+      "modifiable": true,
+      "fallback": "0 6px 12px rgb(15 23 42 / 0.08)"
+    }
+  ],
+  "border": [
+    {
+      "name": "border.none",
+      "value": "0",
+      "role": "默认无边框",
+      "usage": "背景已提供分离时用于干净卡片容器。",
+      "confidence": "high",
+      "modifiable": true,
+      "fallback": "0"
+    },
+    {
+      "name": "border.subtle",
+      "value": "1px solid var(--color-border-subtle)",
+      "role": "低强调分隔",
+      "usage": "用于列表、输入框、表单和分组内容。",
+      "confidence": "medium",
+      "modifiable": true,
+      "fallback": "1px solid #e5e7eb"
+    }
+  ],
+  "motion": [
+    {
+      "name": "motion.duration.fast",
+      "value": "150ms",
+      "role": "快速反馈",
+      "usage": "用于 hover、focus 和 active 反馈。",
+      "confidence": "high",
+      "modifiable": true,
+      "fallback": "150ms"
+    },
+    {
+      "name": "motion.duration.base",
+      "value": "200ms",
+      "role": "标准 UI transition",
+      "usage": "用于面板显隐、颜色变化和页面内容 fade。",
+      "confidence": "high",
+      "modifiable": true,
+      "fallback": "200ms"
+    },
+    {
+      "name": "motion.duration.enter",
+      "value": "300ms",
+      "role": "内容入场",
+      "usage": "用于首次加载 fade-up 动效。",
+      "confidence": "high",
+      "modifiable": true,
+      "fallback": "300ms"
+    },
+    {
+      "name": "motion.easing.standard",
+      "value": "cubic-bezier(0.4, 0, 0.2, 1)",
+      "role": "标准 easing",
+      "usage": "用于颜色、面板和 transform transitions。",
+      "confidence": "high",
+      "modifiable": true,
+      "fallback": "ease"
+    },
+    {
+      "name": "motion.scale.active",
+      "value": "0.95",
+      "role": "Active 按压缩放",
+      "usage": "用于文本按钮和卡片操作。",
+      "confidence": "high",
+      "modifiable": true,
+      "fallback": "0.98"
+    },
+    {
+      "name": "motion.scale.icon.active",
+      "value": "0.90",
+      "role": "图标按钮按压缩放",
+      "usage": "用于紧凑图标控件。",
+      "confidence": "high",
+      "modifiable": true,
+      "fallback": "0.95"
+    }
+  ],
+  "breakpoint": [
+    {
+      "name": "breakpoint.mobile",
+      "value": "0px",
+      "role": "移动端基础断点",
+      "usage": "作为默认布局范围。",
+      "confidence": "high",
+      "modifiable": false,
+      "fallback": "0px"
+    },
+    {
+      "name": "breakpoint.tablet",
+      "value": "768px",
+      "role": "平板范围",
+      "usage": "用于双列机会和更大字号。",
+      "confidence": "high",
+      "modifiable": true,
+      "fallback": "768px"
+    },
+    {
+      "name": "breakpoint.desktop",
+      "value": "1024px",
+      "role": "桌面壳",
+      "usage": "用于侧栏、宽卡片和完整导航。",
+      "confidence": "high",
+      "modifiable": true,
+      "fallback": "1024px"
+    },
+    {
+      "name": "breakpoint.wide",
+      "value": "1280px",
+      "role": "宽屏内容范围",
+      "usage": "用于最大宽度页面容器。",
+      "confidence": "high",
+      "modifiable": true,
+      "fallback": "1280px"
+    }
+  ],
+  "zIndex": [
+    {
+      "name": "zIndex.base",
+      "value": "0",
+      "role": "基础层",
+      "usage": "用于默认内容。",
+      "confidence": "high",
+      "modifiable": false,
+      "fallback": "0"
+    },
+    {
+      "name": "zIndex.nav",
+      "value": "40",
+      "role": "导航层",
+      "usage": "用于 sticky top bars。",
+      "confidence": "high",
+      "modifiable": true,
+      "fallback": "40"
+    },
+    {
+      "name": "zIndex.panel",
+      "value": "50",
+      "role": "浮层层级",
+      "usage": "用于 dropdown 和 popover。",
+      "confidence": "high",
+      "modifiable": true,
+      "fallback": "50"
+    },
+    {
+      "name": "zIndex.modal",
+      "value": "100",
+      "role": "Modal 层级",
+      "usage": "用于阻塞 overlay。",
+      "confidence": "medium",
+      "modifiable": true,
+      "fallback": "100"
+    }
+  ],
+  "opacity": [
+    {
+      "name": "opacity.disabled",
+      "value": "0.38",
+      "role": "Disabled 表现",
+      "usage": "用于仍需可见的非活动控件。",
+      "confidence": "medium",
+      "modifiable": true,
+      "fallback": "0.4"
+    },
+    {
+      "name": "opacity.muted",
+      "value": "0.60",
+      "role": "次级强调",
+      "usage": "用于时间戳、辅助文字和低优先级元信息。",
+      "confidence": "high",
+      "modifiable": true,
+      "fallback": "0.6"
+    },
+    {
+      "name": "opacity.overlay",
+      "value": "0.50",
+      "role": "Overlay 遮罩",
+      "usage": "只用于 modal 背景。",
+      "confidence": "medium",
+      "modifiable": true,
+      "fallback": "0.5"
+    }
+  ],
+  "blur": [
+    {
+      "name": "blur.panel",
+      "value": "12px",
+      "role": "可选面板 blur",
+      "usage": "只在面板对比度仍然充足时使用。",
+      "confidence": "medium",
+      "modifiable": true,
+      "fallback": "8px"
+    }
+  ],
+  "container": [
+    {
+      "name": "container.page.max",
+      "value": "75rem",
+      "role": "最大页面宽度",
+      "usage": "用于顶部导航和桌面内容壳。",
+      "confidence": "high",
+      "modifiable": true,
+      "fallback": "1200px"
+    },
+    {
+      "name": "container.sidebar.width",
+      "value": "17.5rem",
+      "role": "桌面侧栏宽度",
+      "usage": "用于资料、筛选、摘要或次级组件。",
+      "confidence": "high",
+      "modifiable": true,
+      "fallback": "280px"
+    },
+    {
+      "name": "container.mobile.gutter",
+      "value": "1rem",
+      "role": "移动端页面 gutter",
+      "usage": "用于移动端内容和浮动搜索面板。",
+      "confidence": "high",
+      "modifiable": true,
+      "fallback": "16px"
+    }
+  ],
+  "grid": [
+    {
+      "name": "grid.desktop.shell",
+      "value": "sidebar main",
+      "role": "桌面内容壳",
+      "usage": "当次级内容有用时，使用固定侧栏和弹性主列。",
+      "confidence": "high",
+      "modifiable": true,
+      "fallback": "main"
+    },
+    {
+      "name": "grid.desktop.columns",
+      "value": "minmax(0, 17.5rem) minmax(0, 1fr)",
+      "role": "桌面双列 grid",
+      "usage": "用于资料加内容、筛选加结果、导航加详情。",
+      "confidence": "high",
+      "modifiable": true,
+      "fallback": "1fr"
+    },
+    {
+      "name": "grid.card.list",
+      "value": "1fr",
+      "role": "堆叠内容卡片",
+      "usage": "用于内容列表、归档摘要和 feed views。",
+      "confidence": "high",
+      "modifiable": true,
+      "fallback": "1fr"
+    },
+    {
+      "name": "grid.feature.cards",
+      "value": "repeat(auto-fit, minmax(16rem, 1fr))",
+      "role": "响应式功能卡片",
+      "usage": "用于产品功能、收益、方案和评价卡片。",
+      "confidence": "medium",
+      "modifiable": true,
+      "fallback": "repeat(auto-fit, minmax(240px, 1fr))"
+    }
+  ]
+}
