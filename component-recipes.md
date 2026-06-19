@@ -2,6 +2,22 @@
 
 每个组件都应使用语义化 tokens、中性占位文案、可见 focus 状态和响应式规则。
 
+## 读取导航
+
+- 只读取任务需要的组件，不为未出现的组件生成规则。
+- 每个选中组件都必须保留同一份组件契约：使用场景、视觉结构、token 依赖、状态、响应式、可访问性、实现提示、禁止事项和中性示例。
+- 输出代码时，先把 token 映射到 CSS variables 或框架 theme，再写组件 class、props 或 variants。
+- 输出组件库规范时，保留组件命名稳定：Button、Navigation、Hero、Section、Card、Tag、Form、Modal、Footer、CTA、Stats、Media Block 和 Pricing / Plan Block。
+
+## 通用组件契约
+
+- 交互控件必须包含 hover、active、focus、disabled 和 loading 的适用状态。
+- 表单、modal、menu、tabs、segmented controls 和 popover 必须说明键盘行为。
+- 错误、成功、推荐、选中和趋势状态不能只依赖颜色。
+- 每个文本组件在 light/dark 下都必须从当前主题作用域继承或显式使用文本 token，不得继承过期的 `:root` 浅色文字。
+- 移动端触控目标至少 44px，非主控标签可为 32px 高但不得承载关键操作。
+- 长文本、URL、badge 和按钮标签必须能自然换行或堆叠，不能挤出容器。
+
 ## Button
 
 - 使用场景：主操作、次级链接、图标工具、分页和面板触发器。

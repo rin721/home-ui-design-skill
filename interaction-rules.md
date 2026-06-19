@@ -67,6 +67,7 @@
 - 面板开合使用 `motion.duration.base`。
 - 内容入场使用 `motion.duration.enter`。
 - 组件统一使用 `motion.easing.standard`。
+- 主题切换不得让文字色、图标色、控件背景和页面背景跨越低对比中间态；暗色/浅色切换应即时更新这些主题绑定值，或只为非文本装饰做短透明度变化。
 
 ## Micro-Interaction
 

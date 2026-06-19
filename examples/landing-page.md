@@ -1,64 +1,46 @@
 # Landing Page Example
 
-## 输入需求
+## 输入
 
-为面向小团队的效率工具创建落地页。使用平静模块化视觉语言，并输出设计规范。
+- 页面类型：`landing`
+- 目标：为小团队效率工具创建产品落地页
+- 输出：UI design spec + Tailwind 实现说明
+- 设备优先级：balanced
 
-## 使用到的 Skill 规则
+## 可复用输出结构
 
-- 冷色强调 palette。
-- 圆角卡片表面。
-- Split 或 compact hero。
-- 功能卡片 grid。
-- CTA panel。
-- Desktop、tablet 和 mobile 行为。
-- 可见 focus 和 reduced-motion rules。
+1. Navigation：圆角顶部栏、品牌占位、主链接、搜索图标、主题图标、菜单按钮。
+2. Hero：一句主张、短副标题、主 CTA、次级链接、本地产品预览媒体。
+3. Feature cards：3 到 6 张功能卡，使用 icon tile、标题和短描述。
+4. Workflow section：左侧说明，右侧步骤卡片或媒体块。
+5. Stats row：中性数值和上下文，不虚构真实客户结果。
+6. CTA panel：一个主操作和一个弱次级链接。
+7. Footer：低强调工具链接。
 
-## 生成策略
-
-- 使用紧凑顶部导航，包含主链接和工具控件。
-- Hero 包含一个主主张、一句辅助文案和两个操作。
-- 功能卡使用 icon tile 和短文案。
-- 使用证明或 stats row，并使用中性占位指标。
-- 以圆角 CTA panel 结束。
-
-## 结构草案
-
-1. Navigation。
-2. Hero。
-3. Feature grid。
-4. Workflow section。
-5. Stats row。
-6. CTA panel。
-7. Footer。
-
-## Token 使用说明
+## Token 选择
 
 - `color.surface.page` 用于页面画布。
-- `color.surface.card` 用于面板。
-- `color.brand.primary` 用于 active links、icons 和 primary CTA。
-- `radius.card.default` 用于卡片。
-- `spacing.section.lg` 用于 hero 间距。
-- `motion.duration.base` 用于面板和控件。
+- `color.surface.card` 用于导航、feature、stats 和 CTA panel。
+- `color.brand.primary` 用于 active link、icon tile、focus ring 和 primary CTA。
+- `radius.card.default` 用于卡片，`radius.action` 用于 CTA。
+- `grid.feature.cards` 用于功能卡片。
 
-## 响应式说明
+## 响应式行为
 
-- 桌面端使用居中壳和功能卡 grid。
-- 平板端宽度允许时使用双列功能卡。
-- 移动端使用单列、全宽 CTA 和紧凑导航控件。
+- Desktop：居中 75rem 页面壳，hero 可双列，feature cards 使用 auto-fit grid。
+- Tablet：hero 堆叠或保留双列，前提是两列都至少 280px。
+- Mobile：单列，导航折叠为图标控件，CTA 全宽堆叠，媒体设置稳定 `aspect-ratio`。
 
-## 可访问性说明
+## 可访问性验收
 
-- 一个 `h1`。
-- CTA 按钮具备可见 focus。
-- 图标默认为装饰，除非有独立含义。
-- 动效遵守 reduced-motion 设置。
-- 浅色和暗色模式均检查文本对比。
+- 页面只有一个 `h1`。
+- CTA 和导航按钮都有可见 focus。
+- 图标默认装饰，独立语义图标提供文本或 `aria-label`。
+- 动效遵守 `prefers-reduced-motion`。
+- 所有指标使用单位和上下文。
 
-## 质量检查要点
+## 中性占位文案
 
-- 颜色和间距 token 化。
-- 可复用 card recipes。
-- CTA 层级清晰。
-- 移动端触控目标合格。
-- 中性占位内容。
+- H1：`用清晰工作流整理团队任务`
+- CTA：`开始规划`
+- 功能卡：`任务分组`、`状态清晰`、`快速回顾`

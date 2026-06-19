@@ -2,6 +2,22 @@
 
 Every component should use semantic tokens, neutral placeholder content, visible focus states, and responsive rules.
 
+## Reading Guide
+
+- Read only the components required by the task.
+- Every selected component must keep the same component contract: usage, visual structure, token dependencies, states, responsive behavior, accessibility, implementation notes, forbidden patterns, and neutral examples.
+- For code output, map tokens to CSS variables or framework theme values before writing classes, props, or variants.
+- For component library specs, keep component names stable: Button, Navigation, Hero, Section, Card, Tag, Form, Modal, Footer, CTA, Stats, Media Block, and Pricing / Plan Block.
+
+## Shared Component Contract
+
+- Interactive controls must include applicable hover, active, focus, disabled, and loading states.
+- Forms, modals, menus, tabs, segmented controls, and popovers must include keyboard behavior.
+- Error, success, recommended, selected, and trend states must not rely on color alone.
+- Every text component must inherit from the active theme scope or explicitly use text tokens in light and dark modes. It must not inherit stale light text from `:root`.
+- Mobile touch targets must be at least 44px; non-primary tags may be 32px tall only when they do not carry critical actions.
+- Long text, URLs, badges, and button labels must wrap or stack naturally without escaping their containers.
+
 ## Button
 
 - Usage: primary actions, secondary links, icon tools, pagination, and panel triggers.

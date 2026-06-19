@@ -1,61 +1,45 @@
 # Corporate Homepage Example
 
-## 输入需求
+## 输入
 
-为专业服务团队创建首页。使用柔和、可信、模块化且克制的视觉系统。
+- 页面类型：`homepage`
+- 目标：为专业服务团队创建克制可信的首页
+- 输出：UI design spec
+- 风格方向：更企业感
 
-## 使用到的 Skill 规则
+## 可复用输出结构
 
-- 企业感适配和安静 spacing。
-- 顶部导航卡片。
-- Split content hero。
-- 服务卡片。
-- Testimonial 或 proof section。
-- 页脚工具链接。
+1. Navigation：清晰品牌占位、主链接、联系 CTA。
+2. Hero：split hero，左侧价值主张，右侧本地界面或服务流程预览。
+3. Service cards：3 到 6 张服务卡，描述短且保守。
+4. Process section：步骤或方法论列表，不使用夸大承诺。
+5. Proof cards：中性证明模块，可用流程指标或能力摘要，不虚构真实客户。
+6. CTA strip：低压主操作和次级链接。
+7. Footer：工具链接和低强调说明。
 
-## 生成策略
+## Token 选择
 
-- 使用克制冷色强调和更大留白。
-- 服务卡片使用简洁描述。
-- 证明内容放在能力 section 之后。
-- CTA 文案直接且低压。
-
-## 结构草案
-
-1. Navigation。
-2. Split hero with primary CTA。
-3. Service overview cards。
-4. Process section。
-5. Proof cards or testimonial。
-6. CTA strip。
-7. Footer。
-
-## Token 使用说明
-
-- `color.brand.primary` 用于 CTA 和 active indicators。
+- `color.brand.primary` 用于 CTA、active indicators 和 focus ring。
 - `color.text.secondary` 用于辅助文案和元信息。
 - `grid.feature.cards` 用于服务卡。
 - `shadow.none` 用于静态卡片。
-- `shadow.panel.float` 只用于 dropdowns。
+- `shadow.panel.float` 只用于 dropdown、popover 或 modal。
 
-## 响应式说明
+## 响应式行为
 
-- 桌面 hero 可使用双列。
-- 平板宽度紧张时 hero 转为平衡堆叠。
-- 移动端 hero 文本优先，操作全宽。
-- 服务卡在移动端堆叠。
+- Desktop：hero 可双列，服务卡使用 responsive grid。
+- Tablet：先减少工具标签，再折叠导航。
+- Mobile：hero 文本优先，CTA 全宽，服务卡堆叠，证明模块放在主内容之后。
 
-## 可访问性说明
+## 可访问性验收
 
 - 导航使用语义 links。
-- CTA 按钮使用可访问 labels。
-- Testimonials 不自动轮播。
-- 推荐内容不只依赖颜色。
+- CTA 按钮有清晰 label。
+- 证明模块不自动轮播；如使用 carousel，必须提供暂停控件。
+- 对比度和 focus 在浅色、暗色模式下都可读。
 
-## 质量检查要点
+## 中性占位文案
 
-- 专业语气。
-- 卡片不拥挤。
-- Section 层级清晰。
-- 严格检查对比度和 focus。
-- 可替换占位文案。
+- H1：`为复杂服务建立清晰入口`
+- CTA：`预约沟通`
+- 服务卡：`需求梳理`、`流程设计`、`交付支持`

@@ -1,5 +1,11 @@
 # Validation Checklist
 
+## 运行方式
+
+- 生成 UI 后先按本文件逐项检查。
+- 维护仓库时运行 `python scripts/validate_skill.py .`。
+- 发布前确认根目录 `SKILL.md` 是中文默认入口，`en-us/` 是同步镜像，`agents/openai.yaml` 与 skill 描述一致。
+
 ## 美学匹配
 
 - UI 感觉平静、模块化、圆润且内容优先。
@@ -13,6 +19,8 @@
 - 字体使用语义化字号和字重规则。
 - 间距、圆角、阴影、边框和动效使用 tokens。
 - 暗色模式具备对应 token 行为。
+- 暗色主题作用域同时设置 token 覆盖、`color`、`background` 和 `color-scheme`。
+- 主题切换不会通过文字色、图标色、控件背景或页面背景 transition 产生低对比中间态。
 
 ## 布局语法
 
@@ -50,6 +58,7 @@
 ## 可访问性
 
 - 文本对比度可读。
+- 暗色模式下标题、品牌文字、导航、卡片标题、正文、次级文案、按钮、图标和 focus ring 都可读。
 - Focus 可见。
 - 支持键盘操作。
 - 遵守 reduced motion。

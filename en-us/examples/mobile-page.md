@@ -1,59 +1,45 @@
 # Mobile Page Example
 
-## Input Request
+## Input
 
-Create a mobile-first content page with compact navigation, searchable items, and card summaries.
+- Page type: `mobile-page`
+- Goal: create a mobile-first content page with search, list items, and secondary tools
+- Output: UI design spec + HTML/CSS notes
+- Device priority: mobile-first
 
-## Skill Rules Used
+## Reusable Output Structure
 
-- Mobile navigation rules.
-- Card feed layout.
-- Search form recipe.
-- Floating panel interaction.
-- Tag and metadata rules.
+1. Compact top bar: placeholder brand, search, display settings, theme, and menu icons.
+2. Search panel: full-width rounded field opened below the top bar.
+3. Card feed: stacked cards with title, metadata, summary, tags, and action icon.
+4. Pagination: `Load more` or pagination controls.
+5. Secondary widgets: categories, filters, or summary widgets after the main list on mobile.
+6. Footer: low-emphasis links.
 
-## Generation Strategy
-
-- Use a compact top bar with brand, search, display control, theme control, and menu.
-- Put search in a full-width rounded panel below the top bar.
-- Use stacked cards with title, metadata, excerpt, and action icon.
-- Move secondary widgets below the main list.
-- Use footer links with low emphasis.
-
-## Structure Draft
-
-1. Compact top bar.
-2. Optional search panel.
-3. Stacked content cards.
-4. Pagination or load-more action.
-5. Secondary widgets.
-6. Footer.
-
-## Token Use
+## Token Choices
 
 - `container.mobile.gutter` for page padding.
 - `radius.card.default` for card groups.
-- `radius.control` for icon buttons and tags.
-- `color.surface.control` for metadata icons.
-- `motion.duration.base` for floating panels.
+- `radius.control` for icon buttons, tags, and pagination.
+- `color.surface.control` for metadata icons and chips.
+- `motion.duration.base` for search panel visibility.
 
-## Responsive Notes
+## Responsive Behavior
 
-- This layout begins mobile-first.
-- Tablet can introduce two-column feature areas.
-- Desktop can move secondary widgets into a sidebar.
+- Mobile: single column by default; critical controls are at least 44px.
+- Tablet: secondary widgets may form two columns when space allows.
+- Desktop: secondary widgets can move into a sidebar; main list remains 48rem to 60rem wide.
 
-## Accessibility Notes
+## Accessibility Checks
 
-- Menu opens with keyboard support and closes on Escape.
-- Search field has a label.
-- Touch targets meet 44px minimum.
-- Long titles wrap without clipping.
-- Reduced motion removes panel translation.
+- Menu, search, and settings panels close with Escape.
+- Search field has a visible label or reliable `aria-label`.
+- Long titles wrap naturally without clipping body text.
+- No hover-only information.
+- Reduced motion removes search panel translation.
 
-## Quality Check
+## Neutral Placeholder Copy
 
-- Mobile content is readable.
-- Controls are reachable and labeled.
-- Cards do not shift on hover.
-- Secondary content appears after the main list.
+- Item title: `Content item title`
+- Metadata: `Category · 3 min · Updated`
+- Empty state: `No items yet. Add the first item to start the list.`

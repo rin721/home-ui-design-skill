@@ -1,77 +1,81 @@
 # home-ui-design-skill
 
-该仓库定义一套可复用 UI design skill，用于生成平静、圆润、内容优先的模块化界面。它帮助 AI agent 生成设计规范、响应式布局、tokens、组件、提示词和实现规则，并保持统一视觉语言。
+一套可安装、可验证、可演示的 Codex UI design skill，用于生成平静、圆润、内容优先的模块化界面。根目录中文版本是默认安装入口，`en-us/` 保留英文镜像。
 
-## 能解决的问题
+## 适合做什么
 
-- 将松散 UI 需求转化为结构化设计系统。
-- 生成可复用页面和组件规则，而不是一次性界面。
-- 让颜色、圆角、字体、间距、动效和响应式行为保持 token 化。
-- 支持可访问性：可见 focus、键盘行为、触控目标和 reduced motion。
-- 支持设计规范、HTML/CSS、React、Vue、Tailwind、Figma 提示词、线框和组件库规范等输出。
+- 将松散 UI 需求转化为结构化设计规范。
+- 生成首页、落地页、产品介绍区、个人资料页、知识索引、归档页、移动端内容页和组件库规范。
+- 输出 HTML/CSS、React、Vue、Tailwind、Figma prompt、线框草案或实现计划。
+- 保持颜色、圆角、间距、字体、动效、断点和状态 token 化。
+- 强制纳入可访问性：可见 focus、键盘行为、44px 触控目标、错误说明和 reduced motion。
 
-## 适合页面类型
+## 不适合做什么
 
-- 首页
-- 落地页
-- 产品介绍页
-- 个人资料或创作者页面
-- 内容索引
-- 归档时间线
-- 文章页
-- 移动端内容页
-- 组件库规范
+- 高密度企业后台、交易界面、游戏 HUD、暗黑赛博或奢华杂志风。
+- 一比一复刻品牌官网、复制专有视觉资产或使用不可授权素材。
+- 只追求营销视觉冲击、强渐变装饰或高度实验性动效的页面。
+
+## 安装
+
+将仓库根目录放入 Codex skills 目录或通过 Codex skill 安装流程引用该目录即可。默认入口是根目录的 `SKILL.md`，无需安装 `en-us/`。
+
+```text
+home-ui-design-skill/
+  SKILL.md
+  design-tokens.json
+  agents/openai.yaml
+```
+
+英文使用者可以参考 `en-us/`，但它不是单独的默认入口。
 
 ## AI Agent 使用方式
 
-1. 读取 `SKILL.md`。
-2. 加载 `design-tokens.json`。
-3. 从 `style-profile.md` 选择视觉方向。
-4. 从 `layout-patterns.md` 选择布局。
-5. 应用 `component-recipes.md` 中的组件。
-6. 加入 `interaction-rules.md` 中的状态。
-7. 应用 `responsive-rules.md` 中的断点规则。
-8. 使用 `content-rules.md` 组织文案。
-9. 使用 `output-modes.md` 确定交付形式。
-10. 运行 `validation-checklist.md`。
+1. 读取 `SKILL.md`，判断任务是否落在柔和模块化 UI 范围内。
+2. 加载 `design-tokens.json`，先建立 token 映射。
+3. 按需读取 `style-profile.md`、`layout-patterns.md`、`component-recipes.md`、`interaction-rules.md`、`responsive-rules.md` 和 `content-rules.md`。
+4. 风格替换时读取 `adaptation-rules.md`。
+5. 按 `output-modes.md` 组织交付物。
+6. 交付前使用 `validation-checklist.md` 和 `scripts/validate_skill.py` 校验。
 
-## 输入准备
+## 示例与 Demo
 
-建议准备：
+- `examples/*.md` 提供可复用输出样例。
+- `examples/react-demo/` 是 Vite React demo，展示 token、组件、响应式、暗色模式、focus 和 reduced motion 的落地方式。
 
-- 页面类型和目标受众。
-- 主要内容模块。
-- 必需组件。
-- 目标技术栈。
-- 可选主色 hue、字体选择、密度和动效级别。
-- 可访问性等级。
-- 桌面、平板或移动端优先级。
+运行 demo：
 
-## 输出形态
+```bash
+cd examples/react-demo
+npm ci
+npm run dev
+```
 
-- UI 设计规范
-- HTML/CSS
-- React
-- Vue
-- Tailwind
-- Figma 提示词
-- 线框草案
-- 组件库规范
-- 落地页结构
-- 响应式布局计划
+构建 demo：
 
-## 扩展或替换风格
+```bash
+cd examples/react-demo
+npm run build
+```
 
-使用 `adaptation-rules.md` 调整 hue、字体、圆角、卡片处理、密度和动效。保持 token 名称稳定，以便组件继续兼容。
+## 维护与校验
 
-## 更新 Design Tokens
+运行仓库校验：
 
-编辑 `design-tokens.json` 中 token 的 `value`、`role`、`usage`、`modifiable` 或 `fallback`。不要加入创建历史字段。名称应保持语义化和稳定。
+```bash
+python scripts/validate_skill.py .
+```
 
-## 更新 Component Recipes
+运行 Codex skill 基础校验：
 
-编辑 `component-recipes.md` 添加或调整组件。每个组件都应包含使用场景、视觉结构、token 依赖、状态、响应式行为、可访问性、实现提示、禁止模式和中性范例。
+```powershell
+$env:PYTHONUTF8='1'
+python C:\Users\xiaol\.codex\skills\.system\skill-creator\scripts\quick_validate.py D:\coder\rin721\home-ui-design-skill
+python C:\Users\xiaol\.codex\skills\.system\skill-creator\scripts\quick_validate.py D:\coder\rin721\home-ui-design-skill\en-us
+```
 
-## 运行质量检查
+更新规则时保持中英文镜像同步，避免新增私人名称、真实品牌、不可授权素材或无来源数据。
 
-每次生成 UI 后使用 `validation-checklist.md`。同时扫描仓库，确保没有私人名称、非自有文本、创建历史语言、无效 JSON、缺失可访问性状态或过度固定布局。
+## License
+
+MIT

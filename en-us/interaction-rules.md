@@ -67,6 +67,7 @@
 - Use `motion.duration.base` for panel open and close.
 - Use `motion.duration.enter` for content entrance.
 - Use `motion.easing.standard` across components.
+- Theme changes must not animate text color, icon color, control backgrounds, or page background through low-contrast intermediate states. Light/dark switches should update those theme-bound values immediately, or animate only non-text decoration with short opacity changes.
 
 ## Micro-Interaction
 

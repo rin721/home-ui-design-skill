@@ -1,5 +1,11 @@
 # Validation Checklist
 
+## How To Run
+
+- After generating UI, check each applicable item in this file.
+- When maintaining the repository, run `python scripts/validate_skill.py .`.
+- Before release, confirm root `SKILL.md` is the Chinese default entry, `en-us/` is a synchronized mirror, and `agents/openai.yaml` matches the skill description.
+
 ## Aesthetic Fit
 
 - The UI feels calm, modular, rounded, and content-first.
@@ -13,6 +19,8 @@
 - Typography uses semantic size and weight rules.
 - Spacing, radius, shadow, border, and motion use tokens.
 - Dark mode has matching token behavior.
+- The dark theme scope sets token overrides, `color`, `background`, and `color-scheme` together.
+- Theme changes do not transition text color, icon color, control backgrounds, or page background through low-contrast intermediate states.
 
 ## Layout Grammar
 
@@ -50,6 +58,7 @@
 ## Accessibility
 
 - Text contrast is readable.
+- In dark mode, headings, brand text, navigation, card titles, body copy, muted copy, buttons, icons, and focus rings are readable.
 - Focus is visible.
 - Keyboard operation is supported.
 - Reduced motion is honored.

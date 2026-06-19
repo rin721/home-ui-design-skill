@@ -1,0 +1,4 @@
+interface:
+  display_name: "Home UI Design"
+  short_description: "生成柔和模块化 UI 设计规范、组件规则与响应式实现"
+  default_prompt: "使用 $home-ui-design-skill 为内容型产品首页生成响应式 UI 设计规范和 React 实现。"

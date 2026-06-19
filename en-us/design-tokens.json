@@ -87,6 +87,24 @@
       "fallback": "#d7eaff"
     },
     {
+      "name": "color.surface.control.dark",
+      "value": "oklch(0.28 0.035 var(--hue))",
+      "role": "Soft control fill on dark surfaces",
+      "usage": "Use for icon buttons, tags, metadata icons, and compact controls in dark mode.",
+      "confidence": "high",
+      "modifiable": true,
+      "fallback": "#132238"
+    },
+    {
+      "name": "color.surface.control.hover.dark",
+      "value": "oklch(0.34 0.05 var(--hue))",
+      "role": "Soft control hover fill on dark surfaces",
+      "usage": "Use for hover states on compact buttons and pills in dark mode.",
+      "confidence": "high",
+      "modifiable": true,
+      "fallback": "#1c3452"
+    },
+    {
       "name": "color.text.primary",
       "value": "rgba(0, 0, 0, 0.86)",
       "role": "Primary text",
@@ -121,6 +139,24 @@
       "confidence": "high",
       "modifiable": true,
       "fallback": "#a8b0bc"
+    },
+    {
+      "name": "color.focus.ring",
+      "value": "color-mix(in oklch, var(--color-brand-primary) 76%, white)",
+      "role": "Focus ring on light surfaces",
+      "usage": "Use for visible focus outlines or rings in light mode.",
+      "confidence": "high",
+      "modifiable": true,
+      "fallback": "#60a5fa"
+    },
+    {
+      "name": "color.focus.ring.dark",
+      "value": "color-mix(in oklch, var(--color-brand-primary-dark) 72%, white)",
+      "role": "Focus ring on dark surfaces",
+      "usage": "Use for visible focus outlines or rings in dark mode.",
+      "confidence": "high",
+      "modifiable": true,
+      "fallback": "#93c5fd"
     },
     {
       "name": "color.border.subtle",

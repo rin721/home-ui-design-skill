@@ -1,55 +1,43 @@
 # Product Section Example
 
-## Input Request
+## Input
 
-Create a product introduction section for a collaboration feature. Include a component-level design spec.
+- Page type: `product-section`
+- Goal: create an embeddable product capability section
+- Output: component spec + React notes
+- Device priority: balanced
 
-## Skill Rules Used
+## Reusable Output Structure
 
-- Section recipe.
-- Feature list recipe.
-- Media block recipe.
-- Tag and badge recipe.
-- CTA recipe.
+1. Section header: short eyebrow, `h2`, one summary paragraph.
+2. Feature grid: 3 to 4 capability cards with icon tiles and short copy.
+3. Media block: local or user-provided product preview with explicit ratio.
+4. Detail list: compact list with metadata icons and soft dividers.
+5. Inline CTA: one primary action and one secondary link.
 
-## Generation Strategy
+## Token Choices
 
-- Start with a section heading and concise benefit statement.
-- Use a two-column layout on desktop with media and feature details.
-- Add three feature cards with icon tiles.
-- Close with one primary action and one secondary link.
+- `spacing.section.md` for section rhythm.
+- `grid.feature.cards` for responsive feature columns.
+- `radius.media` for media corners.
+- `color.brand.primary` for icon tiles, accent rails, and CTA.
+- `color.text.secondary` for helper copy.
 
-## Structure Draft
+## Responsive Behavior
 
-1. Section header.
-2. Media block.
-3. Feature cards.
-4. Compact metadata badges.
-5. CTA row.
+- Desktop: feature grid plus media/detail can use two columns.
+- Tablet: keep two columns only when both remain readable.
+- Mobile: stack header, feature cards, media, details, and CTA.
 
-## Token Use
+## Accessibility Checks
 
-- `radius.media` for product preview.
-- `color.surface.control` for icon tiles and badges.
-- `spacing.6` for section inner rhythm.
-- `motion.scale.active` for CTA press feedback.
+- Section heading level follows the page hierarchy.
+- Media has meaningful `alt` or empty `alt`, depending on whether it conveys information.
+- Recommended capabilities are not expressed by color alone.
+- CTA copy describes the action and avoids `click here`.
 
-## Responsive Notes
+## Neutral Placeholder Copy
 
-- Desktop uses two columns.
-- Tablet stacks media above features when width is tight.
-- Mobile uses one column and full-width CTA controls.
-
-## Accessibility Notes
-
-- Media receives descriptive alt text when meaningful.
-- Feature icons are decorative by default.
-- CTA order follows visual order.
-- Focus is visible on every action.
-
-## Quality Check
-
-- No unsupported product claims.
-- Feature copy stays short.
-- Media has stable aspect ratio.
-- State rules are included.
+- Section title: `Bring the core workflow into one surface`
+- CTA: `View capabilities`
+- Features: `Clear sorting`, `Fast collaboration`, `Status sync`

@@ -1,55 +1,43 @@
 # Product Section Example
 
-## 输入需求
+## 输入
 
-为协作功能创建产品介绍区，并包含组件级设计规范。
+- 页面类型：`product-section`
+- 目标：为产品能力区生成可嵌入 section
+- 输出：component spec + React notes
+- 设备优先级：balanced
 
-## 使用到的 Skill 规则
+## 可复用输出结构
 
-- Section recipe。
-- Feature list recipe。
-- Media block recipe。
-- Tag and badge recipe。
-- CTA recipe。
+1. Section header：短 eyebrow、`h2`、一段摘要。
+2. Feature grid：3 到 4 张能力卡片，使用 icon tile 和短文案。
+3. Media block：本地或用户提供的产品预览，设置明确比例。
+4. Detail list：紧凑项目列表，使用元信息图标和弱分隔线。
+5. Inline CTA：一个主操作和一个次级链接。
 
-## 生成策略
+## Token 选择
 
-- 以 section 标题和简洁收益陈述开始。
-- 桌面端使用媒体与功能细节双列。
-- 添加三个带 icon tile 的功能卡片。
-- 以一个主操作和一个次级链接收尾。
+- `spacing.section.md` 控制 section 节奏。
+- `grid.feature.cards` 控制功能卡响应式列。
+- `radius.media` 控制媒体圆角。
+- `color.brand.primary` 用于 icon tile、accent rail 和 CTA。
+- `color.text.secondary` 用于辅助说明。
 
-## 结构草案
+## 响应式行为
 
-1. Section header。
-2. Media block。
-3. Feature cards。
-4. Compact metadata badges。
-5. CTA row。
+- Desktop：feature grid 和 media/detail 可双列。
+- Tablet：只在两列可读时保留双列。
+- Mobile：标题、功能卡、媒体、细节和 CTA 顺序堆叠。
 
-## Token 使用说明
+## 可访问性验收
 
-- `radius.media` 用于产品预览。
-- `color.surface.control` 用于 icon tiles 和 badges。
-- `spacing.6` 用于 section 内部节奏。
-- `motion.scale.active` 用于 CTA 按压反馈。
+- Section heading 层级承接页面结构。
+- 媒体有 `alt` 或空 `alt`，取决于是否传达信息。
+- 推荐能力不能只靠颜色表达。
+- CTA 文案描述动作，不使用 `点击这里`。
 
-## 响应式说明
+## 中性占位文案
 
-- 桌面端使用双列。
-- 平板端宽度紧张时媒体在上、功能在下。
-- 移动端使用单列和全宽 CTA 控件。
-
-## 可访问性说明
-
-- 有意义媒体提供描述性 alt。
-- 功能图标默认装饰。
-- CTA 顺序符合视觉顺序。
-- 每个操作都有可见 focus。
-
-## 质量检查要点
-
-- 无不支持产品声明。
-- 功能文案保持简短。
-- 媒体具备稳定 aspect ratio。
-- 包含状态规则。
+- Section title：`把核心流程放进同一个界面`
+- CTA：`查看能力`
+- Feature：`清晰整理`、`快速协作`、`状态同步`

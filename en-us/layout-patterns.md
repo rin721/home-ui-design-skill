@@ -1,5 +1,13 @@
 # Layout Patterns
 
+## How To Use
+
+- Full pages must include one primary layout and one alternative layout.
+- Sections should use only relevant patterns instead of forcing a full page order.
+- Page sections are not framed by default; use cards only for repeated items, modals, tool panels, and content that genuinely needs grouping.
+- Every layout must describe desktop, tablet, and mobile reflow.
+- When the user asks for code, include stable container widths, grid tracks, media ratios, and mobile stacking rules.
+
 ## Page Shell
 
 - Use a centered max-width shell of `container.page.max`.

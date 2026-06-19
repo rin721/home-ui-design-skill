@@ -1,59 +1,45 @@
 # Mobile Page Example
 
-## 输入需求
+## 输入
 
-创建移动端优先内容页，包含紧凑导航、可搜索条目和卡片摘要。
+- 页面类型：`mobile-page`
+- 目标：创建移动端优先内容页，包含搜索、列表和次级工具
+- 输出：UI design spec + HTML/CSS notes
+- 设备优先级：mobile-first
 
-## 使用到的 Skill 规则
+## 可复用输出结构
 
-- Mobile navigation rules。
-- Card feed layout。
-- Search form recipe。
-- Floating panel interaction。
-- Tag and metadata rules。
+1. Compact top bar：品牌占位、搜索、显示设置、主题和菜单图标。
+2. Search panel：触发后在顶部栏下方打开的全宽圆角字段。
+3. Card feed：堆叠内容卡片，包含标题、元信息、摘要、标签和操作图标。
+4. Pagination：`加载更多` 或分页控件。
+5. Secondary widgets：分类、筛选或摘要组件，移动端放在主列表之后。
+6. Footer：低强调链接。
 
-## 生成策略
-
-- 使用紧凑顶部栏，包含品牌、搜索、显示控制、主题控制和菜单。
-- 搜索放在顶部栏下方的全宽圆角面板中。
-- 使用堆叠卡片，包含标题、元信息、摘要和操作图标。
-- 次级组件移动到主列表之后。
-- 页脚链接保持低强调。
-
-## 结构草案
-
-1. Compact top bar。
-2. Optional search panel。
-3. Stacked content cards。
-4. Pagination or load-more action。
-5. Secondary widgets。
-6. Footer。
-
-## Token 使用说明
+## Token 选择
 
 - `container.mobile.gutter` 用于页面 padding。
 - `radius.card.default` 用于卡片组。
-- `radius.control` 用于图标按钮和标签。
-- `color.surface.control` 用于元信息图标。
-- `motion.duration.base` 用于浮层。
+- `radius.control` 用于图标按钮、标签和分页控件。
+- `color.surface.control` 用于元信息图标和 chip。
+- `motion.duration.base` 用于搜索面板显隐。
 
-## 响应式说明
+## 响应式行为
 
-- 该布局从移动端开始。
-- 平板端可引入双列功能区。
-- 桌面端可把次级组件移动到侧栏。
+- Mobile：默认单列，所有关键操作至少 44px。
+- Tablet：如果宽度充足，可将次级 widgets 放成双列。
+- Desktop：可把 secondary widgets 移到侧栏，主列表保持 48rem 到 60rem 可读宽度。
 
-## 可访问性说明
+## 可访问性验收
 
-- 菜单支持键盘并可用 Escape 关闭。
-- 搜索字段有 label。
-- 触控目标满足 44px 最小值。
-- 长标题不裁切。
-- Reduced motion 移除面板平移。
+- 菜单、搜索和设置浮层支持 Escape 关闭。
+- 搜索字段有可见 label 或可靠的 `aria-label`。
+- 长标题自然换行，不裁切正文。
+- 不依赖 hover-only 信息。
+- Reduced motion 移除搜索面板位移动效。
 
-## 质量检查要点
+## 中性占位文案
 
-- 移动端内容可读。
-- 控件可触达且有 label。
-- 卡片 hover 不移动布局。
-- 次级内容位于主列表之后。
+- 列表标题：`内容条目标题`
+- 元信息：`分类 · 3 min · 已更新`
+- 空状态：`暂无条目。添加第一个条目以开始列表。`

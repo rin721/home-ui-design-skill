@@ -87,6 +87,24 @@
       "fallback": "#d7eaff"
     },
     {
+      "name": "color.surface.control.dark",
+      "value": "oklch(0.28 0.035 var(--hue))",
+      "role": "暗色柔和控件填充",
+      "usage": "用于暗色模式中的图标按钮、标签、元信息图标和紧凑控件。",
+      "confidence": "high",
+      "modifiable": true,
+      "fallback": "#132238"
+    },
+    {
+      "name": "color.surface.control.hover.dark",
+      "value": "oklch(0.34 0.05 var(--hue))",
+      "role": "暗色柔和控件 hover 填充",
+      "usage": "用于暗色模式中紧凑按钮和 pill 的 hover 状态。",
+      "confidence": "high",
+      "modifiable": true,
+      "fallback": "#1c3452"
+    },
+    {
       "name": "color.text.primary",
       "value": "rgba(0, 0, 0, 0.86)",
       "role": "主文本",
@@ -121,6 +139,24 @@
       "confidence": "high",
       "modifiable": true,
       "fallback": "#a8b0bc"
+    },
+    {
+      "name": "color.focus.ring",
+      "value": "color-mix(in oklch, var(--color-brand-primary) 76%, white)",
+      "role": "浅色 focus ring",
+      "usage": "用于浅色模式下的可见 focus outline 或 ring。",
+      "confidence": "high",
+      "modifiable": true,
+      "fallback": "#60a5fa"
+    },
+    {
+      "name": "color.focus.ring.dark",
+      "value": "color-mix(in oklch, var(--color-brand-primary-dark) 72%, white)",
+      "role": "暗色 focus ring",
+      "usage": "用于暗色模式下的可见 focus outline 或 ring。",
+      "confidence": "high",
+      "modifiable": true,
+      "fallback": "#93c5fd"
     },
     {
       "name": "color.border.subtle",

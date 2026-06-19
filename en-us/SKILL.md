@@ -1,94 +1,37 @@
 ---
 name: home-ui-design-skill
-description: Generate calm, rounded, content-rich UI systems with cool accent tokens, modular cards, compact navigation, responsive editorial or product layouts, interaction states, and accessibility checks. Use when Codex needs to create UI design specs, HTML/CSS, React, Vue, Tailwind, Figma prompts, component libraries, landing pages, homepages, product sections, archive views, mobile pages, or reusable interface rules with a soft modular visual language.
+description: Generate calm, rounded, content-first modular UI with cool accent tokens, compact navigation, responsive layouts, component states, and accessibility constraints. Use for content homepages, landing pages, product sections, profile pages, knowledge indexes, archive views, mobile content pages, component library specs, HTML/CSS, React, Vue, Tailwind, Figma prompts, and reusable interface rules. Do not use for dense enterprise data grids, trading screens, game HUDs, cyberpunk themes, luxury editorial art direction, heavy brand reproduction, unlicensed assets, or one-to-one page copies.
 ---
 
 # home-ui-design-skill
 
-## Skill Name
+## Goal
 
-home-ui-design-skill
+Use this skill to generate calm, rounded, content-first modular UI. The default visual language is low-chroma cool accents, paired light/dark tokens, rounded cards, compact metadata, icon-led tool controls, clear heading hierarchy, and verifiable responsive behavior.
 
-## Description
+## Accepted Inputs
 
-This skill creates clean, soft, modular interfaces for content-heavy pages, product storytelling, knowledge hubs, profile surfaces, landing pages, and mobile-first page flows. It uses cool-hue accents, rounded cards, calm page backgrounds, concise metadata, icon-led controls, readable type, and responsive layout rules.
+- `page_type`: `homepage`, `landing`, `product-section`, `profile`, `archive`, `article`, `mobile-page`, `component-library`, or `custom`.
+- `audience`: target users, reading context, and device context.
+- `content_inventory`: headings, body copy, metadata, tags, metrics, forms, media, and CTAs.
+- `brand_controls`: optional hue, accent intensity, typography, density, radius, and motion strength.
+- `technology_target`: `design-spec`, `html-css`, `react`, `vue`, `tailwind`, `figma-prompt`, `wireframe`, or `component-library`.
+- `accessibility_level`: `baseline`, `strict`, or `enhanced`.
+- `device_priority`: `desktop-first`, `mobile-first`, or `balanced`.
 
-## Use This Skill For
-
-- Homepages, landing pages, product introduction pages, documentation indexes, profile pages, archive timelines, dashboards with light content density, and mobile page shells.
-- UI design specs that need tokens, layout grammar, component recipes, interaction states, responsive behavior, and validation checks.
-- Frontend implementation plans for HTML/CSS, React, Vue, or Tailwind.
-- Figma prompts, wireframe outlines, and component library specifications.
-
-## Do Not Use This Skill For
-
-- Dense enterprise data grids, trading screens, dark cyberpunk themes, luxury editorial art direction, game HUDs, or highly experimental motion.
-- Interfaces that require heavy skeuomorphism, aggressive gradients, oversized marketing spectacle, or brand asset reproduction.
-- Any output that depends on private assets, recognizable marks, owned illustrations, or unlicensed copy.
-
-## Trigger Phrases
-
-- "Use home-ui-design-skill"
-- "Create a calm modular UI"
-- "Generate a rounded card homepage"
-- "Build a soft editorial layout"
-- "Make a cool-accent landing page"
-- "Design a mobile content page"
-- "Create component recipes for a gentle product UI"
-
-## Input Parameters
-
-- `page_type`: homepage, landing, product-section, profile, archive, article, mobile-page, component-library, or custom.
-- `audience`: target user group and reading context.
-- `content_inventory`: headings, body copy, metadata, tags, metrics, forms, media, and CTA needs.
-- `brand_controls`: optional primary hue, accent intensity, typography choice, density, and motion strength.
-- `technology_target`: design-spec, html-css, react, vue, tailwind, figma-prompt, wireframe, or component-library.
-- `accessibility_level`: baseline, strict, or enhanced.
-- `device_priority`: desktop-first, mobile-first, or balanced.
-
-## Output Forms
-
-- Structured UI design spec.
-- HTML/CSS implementation.
-- React component plan or implementation.
-- Vue component plan or implementation.
-- Tailwind class strategy.
-- Figma prompt.
-- Wireframe outline.
-- Component library specification.
-- Landing page structure.
-- Responsive layout plan.
-
-Default output is a structured UI design spec. When a technology target is provided, include the matching implementation details after the design decisions.
+When input is incomplete, make the smallest reasonable assumption: content-oriented page, default cool accent, balanced device priority, baseline accessibility, and neutral replaceable placeholder content.
 
 ## Runtime Procedure
 
-1. Identify `page_type`, `audience`, `content_inventory`, `device_priority`, and `technology_target`.
-2. Read `design-tokens.json` first and choose the token set.
-3. Read `style-profile.md` to lock the visual direction.
-4. Read `layout-patterns.md` to select a layout grammar.
-5. Read `component-recipes.md` for the needed components.
-6. Read `interaction-rules.md` for states, motion, and keyboard behavior.
-7. Read `responsive-rules.md` for breakpoint behavior.
-8. Read `content-rules.md` for headings, copy density, metadata, labels, and CTA rhythm.
-9. Read `adaptation-rules.md` if the user changes color, type, radius, density, or motion.
-10. Read `output-modes.md` to format the deliverable.
-11. Generate the output.
-12. Run `validation-checklist.md` before delivery.
-13. Apply the release hygiene checks in this file.
-
-## Runtime Decision Tree
-
-1. If the user asks for a full page, choose a page grammar from `layout-patterns.md`.
-2. If the user asks for a section, select only the needed section and component recipes.
-3. If the user asks for code, map tokens to CSS variables before writing component code.
-4. If no copy is provided, create neutral placeholder copy and mark it replaceable.
-5. If no brand controls are provided, use the default cool accent palette.
-6. If mobile priority is high, begin with the single-column mobile rules and expand upward.
-7. If the page has many items, use card lists, compact metadata, tags, and pagination.
-8. If the output includes motion, honor reduced-motion requirements.
-9. If any requirement conflicts with accessibility, prefer accessibility.
-10. If the deliverable is complete, run the validation checklist and release hygiene checks.
+1. Identify page type, audience, content inventory, device priority, technology target, and accessibility level.
+2. Read `design-tokens.json` and choose the light/dark tokens and replaceable tokens.
+3. Read `style-profile.md` to lock the visual boundaries and adaptation range.
+4. Read `layout-patterns.md`; for full pages, choose one primary layout and one fallback layout; for sections, choose only relevant patterns.
+5. Read `component-recipes.md` and load only the component recipes needed for the request.
+6. Read `interaction-rules.md`, `responsive-rules.md`, and `content-rules.md` to add state, keyboard, breakpoint, and copy rules.
+7. Read `adaptation-rules.md` only when the user asks to change hue, type, radius, density, motion, or style direction.
+8. Read `output-modes.md` and format the deliverable as a spec, code, prompt, wireframe, or component library.
+9. Before delivery, run `validation-checklist.md` and fix missing tokens, states, responsive behavior, accessibility, or release hygiene.
 
 ## File Reading Order
 
@@ -99,91 +42,43 @@ Default output is a structured UI design spec. When a technology target is provi
 5. `interaction-rules.md`
 6. `responsive-rules.md`
 7. `content-rules.md`
-8. `adaptation-rules.md`
+8. `adaptation-rules.md`, only for style substitutions
 9. `output-modes.md`
 10. `validation-checklist.md`
-11. `prompt-templates.md` when reusable prompts are requested
-12. `examples/` when an example pattern is useful
+11. `prompt-templates.md`, only when reusable prompts are requested
+12. `examples/`, only when an example format or demo reference is useful
+
+## Output Rules
+
+- Default to a structured UI design spec; when a technology target is provided, add matching implementation details after the design decisions.
+- Map colors, radii, shadows, spacing, type, motion, breakpoints, and z-index to semantic tokens.
+- Code output must define CSS variables or framework theme mappings before component structure.
+- Dark mode must set token overrides, `color`, `background`, and `color-scheme` on the same theme scope. Do not set text color only on `:root` and then override tokens in a nested `.dark` scope.
+- React and Vue output must include props/state models, accessible attributes, keyboard behavior, and reduced-motion handling.
+- Tailwind output must explain the token-to-theme strategy; use arbitrary values only when a token is missing.
+- Figma prompts must include frames, tokens, layout, component list, interaction annotations, responsive variants, and accessibility notes.
+- Placeholder content must be neutral and replaceable. Do not invent real brands, people, domains, prices, or unsupported metrics.
 
 ## Core Design Principles
 
-- Use a calm cool-hue system with low-chroma surfaces and a clear primary accent.
-- Keep surfaces rounded, readable, and modular.
-- Prefer light borders, soft fills, and minimal shadow. Reserve shadows for floating panels.
-- Make cards feel structured through spacing, metadata, badges, and action affordances.
-- Use compact icon buttons for tools and clear text labels for primary navigation and CTA actions.
-- Keep layouts spacious but not sparse. Content should scan quickly.
-- Use strong headings, muted metadata, and short descriptive text.
-- Ensure every component has hover, active, focus, disabled, loading, empty, error, and success rules when applicable.
-
-## Design Token Rules
-
-- Use semantic token names only.
-- Map all colors, radii, shadows, spacing, typography, motion, and breakpoints to tokens.
-- Keep the default primary hue replaceable through `color.brand.hue`.
-- Use OKLCH values where supported and provide hex or rgb fallbacks when needed.
-- Maintain light and dark token pairs.
-- Never hard-code component colors when a token exists.
-
-## Component Generation Rules
-
-- Build each component from a small set of primitives: surface, accent rail, icon control, metadata row, badge, list item, panel, and CTA.
-- Cards use 16px radius by default, white or dark surface fills, and restrained separators.
-- Buttons use 8px radius for compact controls and 12px radius for primary actions.
-- Floating panels use stronger shadow, 12px to 16px radius, and a clear active trigger state.
-- Lists use metadata icons, muted text, and dotted or soft separators when items are dense.
-- Article or long-form blocks use a single broad content card and stable typographic rhythm.
-
-## Responsive Rules
-
-- Desktop uses a centered page width up to 75rem with optional sidebar and main content columns.
-- Tablet uses reduced gutters and two-column layouts only when content remains readable.
-- Mobile uses a single column, compact top bar, icon controls, stacked cards, and deferred side content.
-- Hero media can sit behind or above content, but must not reduce text contrast.
-- Touch targets must be at least 44px square for primary controls.
-
-## Interaction Rules
-
-- Hover states should brighten or tint surfaces without layout shift.
-- Active states may scale controls to 0.95 or 0.90 for tactile feedback.
-- Focus states must be visible and must not rely only on color.
-- Floating panels open near the trigger and close on Escape, outside click, or route change.
-- Motion should be short, calm, and optional.
-- Reduced motion must remove translate and scale effects while preserving opacity changes.
-
-## Content Rules
-
-- Headings should be direct, short, and high contrast.
-- Metadata should be compact and icon-assisted.
-- Tags should be short chips with semantic grouping.
-- Body copy should use short paragraphs and stable line height.
-- CTA text should be action-oriented and under 5 words when possible.
-- Placeholder content must remain neutral and replaceable.
-
-## Technology Mapping
-
-- CSS variables: define tokens under `:root` and override dark mode with a `.dark` class or media query.
-- Tailwind: map tokens through theme variables or arbitrary values only when a token is missing.
-- React: create token-aware primitives and pass component state through props.
-- Vue: use token-aware components and class bindings for state.
-- HTML/CSS: use semantic landmarks, token variables, and progressive enhancement.
-
-## Adaptation Rules
-
-- Replace the primary hue first, then adjust accent intensity, then surface tint.
-- Keep radius, spacing, and typography hierarchy stable unless the user asks for a stronger style shift.
-- When density changes, adjust spacing and metadata visibility together.
-- When motion changes, keep duration ranges consistent across components.
-- Run validation after every style substitution.
+- Use a calm cool-hue system with low-chroma backgrounds and a clear primary accent.
+- Keep surfaces rounded, readable, and modular. Use cards for repeated items, modals, tool panels, or content that genuinely needs framing.
+- Do not turn every page section into a floating card. Page sections should be full-width bands or unframed layouts.
+- Prefer compact icons for tool buttons and clear text for primary navigation and CTA actions.
+- Use strong headings, muted metadata, and short descriptions. Keep pages spacious but not sparse.
+- Hover must not shift layout; active, focus, disabled, loading, empty, error, and success states must be complete for applicable controls.
+- Mobile uses a single column, compact top bar, 44px touch targets, natural wrapping, and stable media ratios.
+- Accessibility wins over decoration: visible focus, keyboard support, non-color-only states, and reduced-motion behavior are required.
+- Check actual computed colors in both light and dark modes for headings, brand text, navigation, card titles, body copy, muted copy, buttons, icons, and focus rings.
 
 ## Forbidden Output
 
 - Do not use private marks, private illustrations, owned photos, copied icon sets, unlicensed copy, or recognizable business data.
-- Do not create a one-to-one page copy.
-- Do not include hidden preparation notes, hidden assumptions, creation-history notes, or private naming.
-- Do not name any non-user-provided entity in generated examples.
-- Do not rely on color alone to convey state.
-- Do not ship components without keyboard and reduced-motion behavior.
+- Do not create a one-to-one page copy or require a fixed page order or fixed item count.
+- Do not ship interactive components without keyboard behavior, focus, error text, or reduced-motion behavior.
+- Do not use pure gradients, purely decorative backgrounds, or one-note color palettes as substitutes for real interface structure.
+- Do not name real entities in examples unless the user supplied them.
+- Do not include hidden preparation notes, creation-history notes, or private naming.
 
 ## Example Calls
 
@@ -198,29 +93,3 @@ Use home-ui-design-skill to generate a component library spec for navigation, ca
 ```text
 Use home-ui-design-skill to produce a React homepage with a cool accent palette, rounded cards, compact metadata, and strict accessibility checks.
 ```
-
-## Quality Checklist
-
-- Uses semantic tokens.
-- Follows the selected layout grammar.
-- Includes required component states.
-- Includes responsive behavior for desktop, tablet, and mobile.
-- Maintains readable contrast.
-- Provides visible focus states.
-- Provides reduced-motion behavior.
-- Uses neutral, replaceable placeholder content.
-- Avoids private or recognizable assets.
-- Can be executed by an AI agent without additional context.
-
-## Release Hygiene Check
-
-Before final output, verify:
-
-- No creation-history or hidden preparation language appears.
-- No private names, domains, marks, or owned copy appear unless supplied by the user for the new task.
-- No copied page order or fixed structure is required.
-- No token, filename, example, or variable uses identifiable naming.
-- JSON is valid.
-- Markdown headings are clear.
-- Component examples use neutral placeholders.
-- Accessibility rules are present.
